@@ -1,21 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (Manual)
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-# 设置权限
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# 允许一个并发部署
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -39,8 +27,8 @@ jobs:
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
-      if: github.ref == 'refs/heads/main'
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./dist
         publish_branch: gh-pages
+        cname: '' # 如果你有自定义域名，可以在这里设置
