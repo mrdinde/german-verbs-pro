@@ -1,20 +1,44 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# German Verbs Pro
 
-# Run and deploy your AI Studio app
+一个帮助你学习和练习德语不规则动词的交互式应用。
 
-This contains everything you need to run your app locally.
+## 🚀 功能特性
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+*   **仪表盘 (Dashboard)**：概览你的学习进度，包括练习总数、正确率和最近的错题。
+*   **测验 (Quiz)**：
+    *   **所有动词测验**：随机从所有动词中抽取进行测验。
+    *   **20 个动词测验**：快速练习 20 个随机动词。
+    *   **错题测验**：针对你之前答错的动词进行强化练习。
+*   **学习 (Study)**：浏览所有德语不规则动词及其现在时、过去时、完成时和中文含义。
+*   **词典 (Dictionary)**：快速查找特定动词的详细信息。
+*   **统计 (Stats)**：查看详细的学习统计数据，并支持重置统计数据。
+*   **响应式设计**：在不同设备上提供良好的用户体验。
 
-## Run Locally
+## 🛠️ 技术栈
 
-**Prerequisites:**  Node.js
+*   **前端**: React, TypeScript, Vite
+*   **样式**: Tailwind CSS (通过 CDN 引入)
 
+## 快速开始
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 📦 安装依赖
+
+在项目根目录运行以下命令安装所有依赖：
+
+```bash
+npm install
+```
+
+### ⚙️ 开发模式
+
+在本地启动开发服务器：
+
+```bash
+npm run dev
+```
+
+应用将在 `http://localhost:3000` (或控制台显示的端口) 运行。
+
+## 🤝 贡献
+
+欢迎任何形式的贡献！如果你有任何建议或发现了 bug，请随时提交 Issue 或 Pull Request。
